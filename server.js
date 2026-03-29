@@ -22,7 +22,7 @@ function renameLocals(code) {
   });
 }
 
-app.post("/rename", (req, res) => {
+app.post("/api", (req, res) => {
   const code = req.body;
   if (!code) return res.status(400).send("No code provided");
   const renamedCode = renameLocals(code);
